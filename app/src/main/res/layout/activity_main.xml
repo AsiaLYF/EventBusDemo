@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.example.activity.MainActivity.Presenter" />
+
+        <variable
+            name="mainEvent"
+            type="com.example.event.MessageEvent" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_blue_bg"
+            android:onClick="@{()->presenter.goToSelf()}"
+            android:text="jump SelfActivity"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_blue_bg"
+            android:onClick="@{()->presenter.goToSecond()}"
+            android:text="jump SecondActivity"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_blue_bg"
+            android:onClick="@{()->presenter.goToFragment()}"
+            android:text="jump Fragment"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_circle_line"
+            android:text="@{mainEvent.message}"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+</layout>
